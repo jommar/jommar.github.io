@@ -6,7 +6,7 @@ export const profile: Profile = {
   summary:
     "I build resilient workflows for hospitals, universities, and AI teams—shipping opinionated tooling that keeps operations measurable, auditable, and fast.",
   availability:
-    "Open for product engineering and technical advisory opportunities in 2026",
+    "Open to product engineering and technical advisory opportunities.",
   focusAreas: [
     "Health-tech platforms",
     "AI + MCP tooling",
@@ -26,8 +26,8 @@ export const profile: Profile = {
     },
     {
       label: "Years shipping products",
-      value: "8+",
-      detail: "From clinic-management to modern AI readiness pipelines.",
+      value: "12+",
+      detail: "From hospital systems to modern AI readiness pipelines.",
     },
     {
       label: "Current focus",
