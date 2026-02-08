@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-6xl mx-auto space-y-16">
+  <div class="max-w-6xl mx-auto space-y-16 px-4">
     <HeroSection />
     <ExperienceTimeline />
     <ProjectsShowcase />
