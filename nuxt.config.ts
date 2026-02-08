@@ -1,34 +1,48 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { resolve } from 'node:path'
+import { resolve } from "node:path";
 
 export default defineNuxtConfig({
-  compatibilityDate: '2025-07-15',
+  compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-  srcDir: '.',
-  modules: ['@nuxtjs/tailwindcss'],
-  css: [resolve('./assets/styles/main.css')],
+  srcDir: ".",
+  modules: ["@nuxtjs/tailwindcss"],
+  css: [resolve("./assets/styles/main.css")],
   postcss: {
     plugins: {
       tailwindcss: {},
-      autoprefixer: {}
-    }
+      autoprefixer: {},
+    },
   },
   alias: {
-    '@': resolve('.'),
-    '~': resolve('.')
+    "@": resolve("."),
+    "~": resolve("."),
+  },
+  nitro: {
+    preset: "github-pages",
   },
   app: {
     head: {
-      title: 'Jommar Ilagan · Portfolio',
-      titleTemplate: '%s · Jommar Ilagan',
+      title: "Jommar Ilagan · Portfolio",
+      titleTemplate: "%s · Jommar Ilagan",
       meta: [
-        { name: 'description', content: 'Portfolio site for Jommar Ilagan showcasing health-tech and AI developer tooling projects.' },
-        { name: 'theme-color', content: '#04050c' },
-        { property: 'og:type', content: 'website' },
-        { property: 'og:site_name', content: 'Jommar Ilagan Portfolio' },
-        { property: 'og:title', content: 'Jommar Ilagan · Product-focused engineer' },
-        { property: 'og:description', content: 'Nuxt + Tailwind portfolio featuring clinic management, AI tooling, and developer productivity work.' }
-      ]
-    }
-  }
-})
+        {
+          name: "description",
+          content:
+            "Portfolio site for Jommar Ilagan showcasing health-tech and AI developer tooling projects.",
+        },
+        { name: "theme-color", content: "#04050c" },
+        { property: "og:type", content: "website" },
+        { property: "og:site_name", content: "Jommar Ilagan Portfolio" },
+        {
+          property: "og:title",
+          content: "Jommar Ilagan · Product-focused engineer",
+        },
+        {
+          property: "og:description",
+          content:
+            "Nuxt + Tailwind portfolio featuring clinic management, AI tooling, and developer productivity work.",
+        },
+      ],
+    },
+  },
+});
