@@ -1,6 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { resolve } from "node:path";
 
+const baseURL = process.env.NUXT_APP_BASE_URL || "/";
+
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
@@ -19,8 +21,13 @@ export default defineNuxtConfig({
   },
   nitro: {
     preset: "github-pages",
+    prerender: {
+      crawlLinks: true,
+      routes: ["/"],
+    },
   },
   app: {
+    baseURL,
     head: {
       title: "Jommar Ilagan · Portfolio",
       titleTemplate: "%s · Jommar Ilagan",

@@ -17,6 +17,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      # User/Org pages (repo ending with .github.io) should stay at "/"
+      NUXT_APP_BASE_URL: ${{ endsWith(github.event.repository.name, '.github.io') && '/' || format('/{0}/', github.event.repository.name) }}
     steps:
       - uses: actions/checkout@v4
 
