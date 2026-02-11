@@ -2,16 +2,16 @@ import type { Profile } from "~/types/profile";
 
 export const profile: Profile = {
   name: "Jommar Ilagan",
-  title: "Full-stack engineer crafting health-tech and AI tooling",
+  title: "Senior JavaScript engineer with AI in the toolkit",
   summary:
-    "I build resilient workflows for hospitals, universities, and AI teams—shipping opinionated tooling that keeps operations measurable, auditable, and fast.",
+    "I design and ship resilient Node.js + Vue applications, using AI as a tool where it helpswithout giving up on architecture, tests, or observability.",
   availability:
-    "Open to product engineering and technical advisory opportunities.",
+    "Open to senior web, product engineering, and technical leadership roles.",
   focusAreas: [
-    "Health-tech platforms",
-    "AI + MCP tooling",
-    "Developer experience",
-    "Automation strategy",
+    "JavaScript & TypeScript",
+    "Node.js services",
+    "Vue & Nuxt web apps",
+    "AI-assisted workflows",
   ],
   stats: [
     {
@@ -36,6 +36,59 @@ export const profile: Profile = {
         "AI-first server that keeps large language models production ready.",
     },
   ],
+  aiWorkflow: [
+    {
+      title: "From spec to stable code",
+      summary:
+        "Turn product docs into focused prompts, then into reviewed, testable changes.",
+      points: [
+        "Draft implementation plans in natural language, then refine with AI before touching code.",
+        "Use LLMs to propose edge cases and unhappy paths I might miss.",
+        "Keep the final decisions, naming, and architecture in human hands.",
+      ],
+    },
+    {
+      title: "Safe AI-powered refactors",
+      summary:
+        "Let AI handle mechanical work while I guard invariants and behavior.",
+      points: [
+        "Use AI to suggest refactors across Vue components and Node services.",
+        "Validate changes with existing tests and add coverage where signals are weak.",
+        "Stage risky changes behind feature flags or configuration.",
+      ],
+    },
+    {
+      title: "Designing tools for agents",
+      summary:
+        "Build MCP-style tools that make it hard for agents to do the wrong thing.",
+      points: [
+        "Wrap side-effectful actions in schemas, validators, and audit logs.",
+        "Expose read-only inspection tools before write-capable ones.",
+        "Document contracts so AI clients can self-check before calling.",
+      ],
+    },
+  ],
+  stack: [
+    {
+      label: "Core stack",
+      items: ["JavaScript / TypeScript", "Node.js", "Vue 3", "Nuxt 3"],
+    },
+    {
+      label: "Backend & data",
+      items: ["REST APIs", "MySQL", "Knex", "Express", "Serverless (Lambda)"],
+    },
+    {
+      label: "Delivery",
+      items: ["GitHub Actions", "Netlify", "Vercel", "CI-first workflows"],
+    },
+  ],
+  strengths: [
+    "Untangling legacy JavaScript and progressively modernizing it.",
+    "Designing Node.js services that stay debuggable as they grow.",
+    "Introducing AI tools to teams without breaking existing workflows.",
+  ],
+  lookingFor:
+    "Senior web and product engineering work where JavaScript, Node.js, and Vue are central—and where AI tooling is treated as an amplifier, not a replacement.",
   experiences: [
     {
       period: "2025–Present",

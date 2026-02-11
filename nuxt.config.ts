@@ -35,7 +35,7 @@ export default defineNuxtConfig({
         {
           name: "description",
           content:
-            "Portfolio site for Jommar Ilagan showcasing health-tech and AI developer tooling projects.",
+            "Portfolio site for Jommar Ilagan showcasing health-tech and developer projects that use AI as a supporting tool.",
         },
         { name: "theme-color", content: "#04050c" },
         { property: "og:type", content: "website" },
@@ -47,7 +47,7 @@ export default defineNuxtConfig({
         {
           property: "og:description",
           content:
-            "Nuxt + Tailwind portfolio featuring clinic management, AI tooling, and developer productivity work.",
+            "Nuxt + Tailwind portfolio featuring clinic management, developer productivity work, and projects that use AI as an amplifier.",
         },
       ],
     },

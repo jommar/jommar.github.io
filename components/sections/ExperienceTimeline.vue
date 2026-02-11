@@ -14,7 +14,7 @@
         class="timeline-entry"
       >
         <div class="timeline-period">
-          <span>{{ item.period }}</span>
+          <div v-for="(period, index) in item.period.split('–')" :key="index">{{ period }}</div>
         </div>
         <SurfaceCard class="rounded-3xl p-6">
           <div class="flex flex-wrap items-center justify-between gap-3 mb-4">

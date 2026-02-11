@@ -22,6 +22,17 @@ export interface Project {
   status: 'in-progress' | 'shipped'
 }
 
+export interface AiWorkflowItem {
+  title: string
+  summary: string
+  points: string[]
+}
+
+export interface StackGroup {
+  label: string
+  items: string[]
+}
+
 export interface ContactLink {
   label: string
   href: string
@@ -39,6 +50,10 @@ export interface Profile {
   experiences: ExperienceItem[]
   projects: Project[]
   activity: string[]
+  aiWorkflow: AiWorkflowItem[]
+  stack: StackGroup[]
+  strengths: string[]
+  lookingFor: string
   contact: ContactLink[]
   socials: ContactLink[]
 }
