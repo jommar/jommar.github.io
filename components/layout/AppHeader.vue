@@ -31,9 +31,7 @@
           aria-label="GitHub profile"
         >
           <span class="sr-only">GitHub</span>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor">
-            <path fill-rule="evenodd" d="M12 .5C5.649.5.5 5.65.5 12a11.5 11.5 0 0 0 7.855 10.93c.575.11.786-.25.786-.556 0-.274-.01-1.17-.016-2.125-3.197.696-3.873-1.37-3.873-1.37-.523-1.33-1.278-1.686-1.278-1.686-1.044-.713.08-.699.08-.699 1.155.082 1.764 1.187 1.764 1.187 1.027 1.76 2.694 1.252 3.351.958.104-.744.402-1.252.732-1.54-2.553-.29-5.236-1.277-5.236-5.683 0-1.255.447-2.28 1.18-3.085-.118-.29-.512-1.457.112-3.038 0 0 .964-.309 3.16 1.178a10.89 10.89 0 0 1 5.754 0c2.195-1.487 3.158-1.178 3.158-1.178.626 1.581.232 2.748.114 3.038.734.805 1.178 1.83 1.178 3.085 0 4.418-2.688 5.39-5.252 5.674.413.355.781 1.05.781 2.118 0 1.53-.014 2.761-.014 3.138 0 .308.208.67.794.555A11.504 11.504 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z" clip-rule="evenodd" />
-          </svg>
+          <IconGithub class="h-5 w-5" />
         </a>
         <a
           :href="profile?.socials?.[0]?.href"
@@ -51,12 +49,8 @@
           @click="toggleMenu"
         >
           <span class="sr-only">Toggle menu</span>
-          <svg v-if="!isMenuOpen" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor">
-            <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
-          </svg>
-          <svg v-else xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor">
-            <path d="m18.3 5.71-1-1L12 10l-5.3-5.29-1 1L11 11l-5.3 5.29 1 1L12 12l5.3 5.29 1-1L13 11z" />
-          </svg>
+          <IconMenu v-if="!isMenuOpen" class="h-5 w-5" />
+          <IconClose v-else class="h-5 w-5" />
         </button>
       </div>
     </div>
@@ -91,6 +85,9 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { profile } from '~/data/profile'
+import IconGithub from '~/components/icons/IconGithub.vue'
+import IconMenu from '~/components/icons/IconMenu.vue'
+import IconClose from '~/components/icons/IconClose.vue'
 
 const navItems = [
   { label: 'Focus', href: '#focus' },
