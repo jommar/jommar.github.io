@@ -77,6 +77,7 @@ export const profile: Profile = {
         "Modular MCP server that keeps AI experiences safe via shared services, validators, and predictable envelopes.",
       tech: ["Node.js", "MCP", "Zod"],
       repo: "https://github.com/jommar/preflight-mcp",
+      url: "",
       highlights: [
         "Unified controller + service pattern for both MCP tools and HTTP routes.",
         "Zod-backed schemas that prevent unvetted payloads from reaching adapters.",
@@ -90,6 +91,7 @@ export const profile: Profile = {
         "Nuxt/Vue workspace for crafting quizzes with real-time previews, import/export, and tailored UI elements.",
       tech: ["Nuxt 3", "Vue", "TypeScript"],
       repo: "https://github.com/jommar/quiz-maker-vue",
+      url: "https://86th-quiz-maker-v2.netlify.app/",
       highlights: [
         "Composable question editor with keyboard-only workflow.",
         "Server endpoints that merge imported quizzes safely.",
@@ -103,6 +105,7 @@ export const profile: Profile = {
         "Legacy web app orchestrating patient intake, queueing, and physician scheduling for a neighborhood clinic.",
       tech: ["Web", "Operations", "Analytics"],
       repo: "https://github.com/jommar/clinic-management",
+      url: "",
       highlights: [
         "Centralized charting and inventory metrics so staff can move in sync.",
         "Printable billing artifacts that shorten patient checkout time.",
@@ -116,6 +119,7 @@ export const profile: Profile = {
         "Express-based service that standardizes admission and triage notifications for university hospitals.",
       tech: ["Node.js", "Express", "Nodemailer"],
       repo: "https://github.com/jommar/uerm-email-api--node",
+      url: "",
       highlights: [
         "Rendered transactional templates with environment-aware branding.",
         "Queue-aware sending so sudden spikes never block urgent updates.",
@@ -142,6 +146,12 @@ export const profile: Profile = {
       href: "https://github.com/jommar",
       icon: "mdi-github",
       caption: "Follow the work, open issues, or review active RFCs.",
+    },
+    {
+      label: "View CV (PDF)",
+      href: "/cv/jvi_cv.pdf",
+      icon: "mdi-file",
+      caption: "Download the latest resume as a PDF.",
     },
   ],
   socials: [

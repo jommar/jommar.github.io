@@ -17,6 +17,7 @@ export interface Project {
   description: string
   tech: string[]
   repo: string
+  url?: string
   highlights: string[]
   status: 'in-progress' | 'shipped'
 }

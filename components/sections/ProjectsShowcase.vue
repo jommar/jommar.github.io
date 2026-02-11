@@ -33,11 +33,11 @@
             <p class="text-sm text-soft">{{ project.description }}</p>
           </div>
           <a
-            :href="project.repo"
+            :href="project.url || project.repo"
             target="_blank"
             rel="noopener"
             class="h-10 w-10 rounded-2xl border border-white/20 flex items-center justify-center text-soft"
-            aria-label="Open repository"
+            :aria-label="project.url ? 'Open live project' : 'Open repository'"
           >
             ↗
           </a>
