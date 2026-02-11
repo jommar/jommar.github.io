@@ -16,7 +16,7 @@
         <div class="timeline-period">
           <span>{{ item.period }}</span>
         </div>
-        <div class="surface-card rounded-3xl p-6">
+        <SurfaceCard class="rounded-3xl p-6">
           <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
             <div>
               <p class="text-lg font-semibold">{{ item.role }}</p>
@@ -33,7 +33,7 @@
             </div>
           </div>
           <p class="text-sm leading-relaxed text-soft">{{ item.impact }}</p>
-        </div>
+        </SurfaceCard>
       </article>
     </div>
   </section>
@@ -41,6 +41,7 @@
 
 <script setup lang="ts">
 import { profile } from '~/data/profile'
+import SurfaceCard from '~/components/ui/SurfaceCard.vue'
 </script>
 
 <style scoped>

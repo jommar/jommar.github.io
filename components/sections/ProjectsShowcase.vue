@@ -19,10 +19,11 @@
     </div>
 
     <div class="grid gap-6 md:grid-cols-2">
-      <article
+      <SurfaceCard
         v-for="project in profile.projects"
         :key="project.name"
-        class="surface-card rounded-[28px] p-6 flex flex-col gap-6"
+        as="article"
+        class="rounded-[28px] p-6 flex flex-col gap-6"
       >
         <div class="flex items-start justify-between gap-3">
           <div>
@@ -61,11 +62,12 @@
             <span>{{ highlight }}</span>
           </li>
         </ul>
-      </article>
+      </SurfaceCard>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
 import { profile } from '~/data/profile'
+import SurfaceCard from '~/components/ui/SurfaceCard.vue'
 </script>
