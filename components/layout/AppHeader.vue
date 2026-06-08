@@ -75,15 +75,7 @@ function toggleDark() {
 
 onMounted(() => {
   const stored = localStorage.getItem("theme")
-  const meta = document.querySelector('meta[name="theme-color"]')
-  if (stored === "light") {
-    isDark.value = false
-    document.documentElement.classList.remove("dark")
-    meta?.setAttribute("content", "#ffffff")
-  } else {
-    isDark.value = true
-    document.documentElement.classList.add("dark")
-    meta?.setAttribute("content", "#030712")
-  }
+  isDark.value = stored !== "light"
+  document.querySelector('meta[name="theme-color"]')?.setAttribute("content", isDark.value ? "#030712" : "#ffffff")
 })
 </script>

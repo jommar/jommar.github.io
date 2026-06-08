@@ -19,6 +19,9 @@ export default defineNuxtConfig({
   app: {
     baseURL: "/",
     head: {
+      htmlAttrs: {
+        class: "dark",
+      },
       title: "Jommar Ilagan · Full Stack Developer & AI Agent Infrastructure",
       titleTemplate: "%s · Jommar Ilagan",
       meta: [
@@ -50,6 +53,10 @@ export default defineNuxtConfig({
         },
       ],
       script: [
+        {
+          children:
+            "(function(){var t=localStorage.getItem('theme');if(t==='light'){document.documentElement.classList.remove('dark')}})()",
+        },
         {
           type: "application/ld+json",
           children: JSON.stringify({
