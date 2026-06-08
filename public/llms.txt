@@ -14,7 +14,8 @@ Full Stack Developer with 10+ years of experience. Based in Manila, Philippines.
 - Frameworks: Vue.js, Nuxt, Node.js, Express, Knex
 - Tools: Git, Docker, AWS Lambda, Cypress, Postman
 - Databases: MySQL, MS SQL, Redis, PostgreSQL
-- AI: Agent orchestration, LangChain/CrewAI/AutoGen ecosystem, MCP protocols
+- AI: Agent orchestration, Claude Code, Opencode, Hermes, Agent Zero, LangChain/CrewAI/AutoGen ecosystem, MCP protocols
+- LLM Providers: OpenRouter, DeepSeek, Anthropic, OpenAI
 
 ## Experience
 - CoDev — Full Stack Developer (2023–present)

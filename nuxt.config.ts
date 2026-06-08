@@ -64,6 +64,12 @@ export default defineNuxtConfig({
             knowsAbout: [
               "AI Agent Infrastructure",
               "Agent Orchestration",
+              "Claude Code",
+              "Opencode",
+              "Hermes",
+              "Agent Zero",
+              "OpenRouter",
+              "DeepSeek",
               "Vue.js",
               "Nuxt",
               "Node.js",

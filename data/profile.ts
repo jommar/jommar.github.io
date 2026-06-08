@@ -28,7 +28,7 @@ export const profile: Profile = {
     {
       title: "AI Agent Architecture",
       description:
-        "Designed commercial-grade AI agent orchestration systems using orchestrator/subagent/delegation patterns. Deep knowledge of LangChain, CrewAI, AutoGen, and OpenAI Agents SDK.",
+        "Designed commercial-grade AI agent orchestration systems using orchestrator/subagent/delegation patterns. Deep knowledge of Claude Code, Opencode, Hermes, Agent Zero, LangChain, CrewAI, and OpenAI Agents SDK.",
       icon: "Cpu",
     },
     {
@@ -55,7 +55,7 @@ export const profile: Profile = {
     {
       title: "Agent Configuration",
       description:
-        "Custom opencode and Claude Code setups with multi-project subagents, skills, guardrails, and tool permissions. Ported .claude agents to .opencode ecosystem.",
+        "Custom setups across Claude Code, Opencode, Hermes, and Agent Zero with multi-project subagents, skills, guardrails, and tool permissions. Ported .claude agents to .opencode ecosystem.",
       icon: "Settings2",
     },
     {
@@ -74,6 +74,14 @@ export const profile: Profile = {
     {
       label: "Frameworks",
       items: ["Vue.js", "Nuxt", "Node.js", "Express", "Knex"],
+    },
+    {
+      label: "AI Agents",
+      items: ["Claude Code", "Opencode", "Hermes", "Agent Zero"],
+    },
+    {
+      label: "LLM Providers",
+      items: ["OpenRouter", "DeepSeek", "Anthropic", "OpenAI"],
     },
     {
       label: "Tools",
