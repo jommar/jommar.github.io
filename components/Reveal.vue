@@ -1,5 +1,5 @@
 <template>
-  <div ref="el" class="transition-all duration-700" :class="[animationClass, { 'opacity-0': !visible, 'opacity-100': visible, 'translate-y-6': !visible, 'translate-y-0': visible }]">
+  <div ref="el" class="transition-all duration-700" :class="{ 'opacity-0': !visible, 'opacity-100': visible, 'translate-y-6': !visible, 'translate-y-0': visible }">
     <slot />
   </div>
 </template>

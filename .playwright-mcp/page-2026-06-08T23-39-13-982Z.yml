@@ -1,0 +1,218 @@
+- generic [ref=e3]:
+  - region "About me" [ref=e4]:
+    - generic [ref=e6]:
+      - generic [ref=e8]:
+        - img [ref=e9]
+        - generic [ref=e13]: Manila, Philippines 1016
+      - heading "Jommar Ilagan" [level=1] [ref=e15]
+      - paragraph [ref=e17]: Full Stack Developer
+      - paragraph [ref=e19]: Experienced Full Stack Developer with 10+ years of expertise in leading development teams, optimizing full-stack applications, and driving successful API integrations. Currently focused on AI agent infrastructure — designing agent orchestration systems, configuring AI tooling, and bridging the gap between traditional software engineering and AI-powered development workflows.
+      - generic [ref=e21]:
+        - link "Get in Touch" [ref=e22] [cursor=pointer]:
+          - /url: "#contact"
+          - text: Get in Touch
+          - img [ref=e23]
+        - link "Download CV" [ref=e25] [cursor=pointer]:
+          - /url: /cv/jvi_cv.pdf
+          - text: Download CV
+          - img [ref=e26]
+        - link "GitHub" [ref=e29] [cursor=pointer]:
+          - /url: https://github.com/jommar
+          - img [ref=e30]
+          - text: GitHub
+        - link "LinkedIn" [ref=e32] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/jommarilagan/
+          - img [ref=e33]
+          - text: LinkedIn
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - generic [ref=e38]: 10+
+          - generic [ref=e39]: Years Experience
+        - generic [ref=e40]:
+          - generic [ref=e41]: "3"
+          - generic [ref=e42]: Companies
+        - generic [ref=e43]:
+          - generic [ref=e44]: Full-Stack
+          - generic [ref=e45]: End-to-End Dev
+  - region "Value proposition" [ref=e46]:
+    - generic [ref=e47]:
+      - generic [ref=e49]:
+        - paragraph [ref=e50]: Why Work With Me
+        - heading "Three decades of engineering, one decade of shipping" [level=2] [ref=e51]:
+          - text: Three decades of engineering,
+          - text: one decade of shipping
+      - generic [ref=e52]:
+        - article [ref=e54]:
+          - img [ref=e56]
+          - heading "10+ Years Full-Stack" [level=3] [ref=e59]
+          - paragraph [ref=e60]: End-to-end application development across Vue, Nuxt, Node.js, and relational databases. Proven track record of leading teams and delivering production-grade software.
+        - article [ref=e62]:
+          - img [ref=e64]
+          - heading "AI Agent Architecture" [level=3] [ref=e67]
+          - paragraph [ref=e68]: Designed commercial-grade AI agent orchestration systems using orchestrator/subagent/delegation patterns. Deep knowledge of Claude Code, Opencode, Hermes, Agent Zero, LangChain, CrewAI, and OpenAI Agents SDK.
+        - article [ref=e70]:
+          - img [ref=e72]
+          - heading "AI Tooling Mastery" [level=3] [ref=e75]
+          - paragraph [ref=e76]: Expert in configuring opencode, Claude Code, and MCP servers. Built custom subagents, skills, guardrails, and ported agent ecosystems across toolchains.
+  - region "Capabilities" [ref=e77]:
+    - generic [ref=e78]:
+      - generic [ref=e80]:
+        - paragraph [ref=e81]: Capabilities
+        - heading "What I bring to the table" [level=2] [ref=e82]
+        - paragraph [ref=e83]: A blend of traditional full-stack engineering and modern AI infrastructure skills.
+      - generic [ref=e84]:
+        - article [ref=e86]:
+          - img [ref=e88]
+          - heading "AI Agent Orchestration" [level=3] [ref=e93]
+          - paragraph [ref=e94]: Designed delegation-first agent harnesses with orchestrator/subagent patterns, stateful graph execution, memory systems, and human-in-the-loop approval flows.
+        - article [ref=e96]:
+          - img [ref=e98]
+          - heading "AI Research & Analysis" [level=3] [ref=e103]
+          - paragraph [ref=e104]: Deep-dive competitive analysis of Wayland, LangChain/LangGraph, CrewAI, AutoGen, OpenAI Agents SDK, MCP protocols, and agent runtime architectures.
+        - article [ref=e106]:
+          - img [ref=e108]
+          - heading "Agent Configuration" [level=3] [ref=e111]
+          - paragraph [ref=e112]: Custom setups across Claude Code, Opencode, Hermes, and Agent Zero with multi-project subagents, skills, guardrails, and tool permissions. Ported .claude agents to .opencode ecosystem.
+        - article [ref=e114]:
+          - img [ref=e116]
+          - heading "Full-Stack Development" [level=3] [ref=e121]
+          - paragraph [ref=e122]: Vue/Nuxt frontends, Node.js/Express APIs, Knex/MySQL/MS SQL databases, AWS Lambda serverless, FHIR API integration, and legacy system modernization.
+  - region "Tech stack" [ref=e123]:
+    - generic [ref=e124]:
+      - generic [ref=e126]:
+        - paragraph [ref=e127]: Tech Stack
+        - heading "Tools & technologies I work with" [level=2] [ref=e128]
+      - generic [ref=e129]:
+        - generic [ref=e131]:
+          - heading "Languages" [level=3] [ref=e132]
+          - list [ref=e133]:
+            - listitem [ref=e134]: JavaScript
+            - listitem [ref=e136]: TypeScript
+            - listitem [ref=e138]: PHP
+            - listitem [ref=e140]: SQL
+        - generic [ref=e143]:
+          - heading "Frameworks" [level=3] [ref=e144]
+          - list [ref=e145]:
+            - listitem [ref=e146]: Vue.js
+            - listitem [ref=e148]: Nuxt
+            - listitem [ref=e150]: Node.js
+            - listitem [ref=e152]: Express
+            - listitem [ref=e154]: Knex
+        - generic [ref=e157]:
+          - heading "AI Agents" [level=3] [ref=e158]
+          - list [ref=e159]:
+            - listitem [ref=e160]: Claude Code
+            - listitem [ref=e162]: Opencode
+            - listitem [ref=e164]: Hermes
+            - listitem [ref=e166]: Agent Zero
+        - generic [ref=e169]:
+          - heading "LLM Providers" [level=3] [ref=e170]
+          - list [ref=e171]:
+            - listitem [ref=e172]: OpenRouter
+            - listitem [ref=e174]: DeepSeek
+            - listitem [ref=e176]: Anthropic
+            - listitem [ref=e178]: OpenAI
+        - generic [ref=e181]:
+          - heading "Tools" [level=3] [ref=e182]
+          - list [ref=e183]:
+            - listitem [ref=e184]: Git
+            - listitem [ref=e186]: Docker
+            - listitem [ref=e188]: AWS Lambda
+            - listitem [ref=e190]: Postman
+            - listitem [ref=e192]: Cypress
+        - generic [ref=e195]:
+          - heading "Databases" [level=3] [ref=e196]
+          - list [ref=e197]:
+            - listitem [ref=e198]: MySQL
+            - listitem [ref=e200]: MS SQL
+            - listitem [ref=e202]: Redis
+            - listitem [ref=e204]: PostgreSQL
+  - region "Work highlights" [ref=e206]:
+    - generic [ref=e207]:
+      - generic [ref=e209]:
+        - paragraph [ref=e210]: Work Highlights
+        - heading "Key projects & contributions" [level=2] [ref=e211]
+      - generic [ref=e212]:
+        - article [ref=e214]:
+          - generic [ref=e216]:
+            - heading "AI Agent Harness" [level=3] [ref=e217]
+            - paragraph [ref=e218]: Product Designer & Architect · 2026
+          - paragraph [ref=e219]: Designed a commercial AI agent orchestration platform with delegation-first architecture. Defined product vision, feature specs, technical architecture, security model, and MVP roadmap.
+          - generic [ref=e220]:
+            - generic [ref=e221]: Agent Orchestration
+            - generic [ref=e222]: System Design
+            - generic [ref=e223]: Product Docs
+        - article [ref=e225]:
+          - generic [ref=e227]:
+            - heading "AI Tool Ecosystem Porting" [level=3] [ref=e228]
+            - paragraph [ref=e229]: AI Tooling Engineer · 2026
+          - paragraph [ref=e230]: Ported Claude Code agents and skills to opencode with multi-project support. Built backend/frontend coders, code reviewers, and security audit subagents with project detection and guardrails.
+          - generic [ref=e231]:
+            - generic [ref=e232]: Opencode
+            - generic [ref=e233]: Claude Code
+            - generic [ref=e234]: Agent Config
+        - article [ref=e236]:
+          - generic [ref=e238]:
+            - heading "FHIR API Integration" [level=3] [ref=e239]
+            - paragraph [ref=e240]: Full Stack Developer · 2022-2023
+          - paragraph [ref=e241]: Led FHIR API integration at Rendition Digital, ensuring seamless healthcare data exchange between systems. Designed scalable APIs and coordinated large-scale deployments.
+          - generic [ref=e242]:
+            - generic [ref=e243]: FHIR
+            - generic [ref=e244]: API Design
+            - generic [ref=e245]: Healthcare
+  - region "Work experience" [ref=e246]:
+    - generic [ref=e247]:
+      - generic [ref=e249]:
+        - paragraph [ref=e250]: Experience
+        - heading "Where I've worked" [level=2] [ref=e251]
+      - generic [ref=e252]:
+        - generic [ref=e256]:
+          - generic [ref=e257]:
+            - generic [ref=e258]:
+              - heading "CoDev" [level=3] [ref=e259]
+              - paragraph [ref=e260]: Full Stack Developer
+            - time [ref=e261]: 2023 — Present
+          - list [ref=e262]:
+            - listitem [ref=e263]: Spearhead development and optimization of robust full-stack applications ensuring high performance and scalability
+            - listitem [ref=e265]: Lead cross-functional teams to deliver quality software, driving codebase refactoring for improved maintainability and performance
+        - generic [ref=e270]:
+          - generic [ref=e271]:
+            - generic [ref=e272]:
+              - heading "Rendition Digital Inc." [level=3] [ref=e273]
+              - paragraph [ref=e274]: Full Stack Developer
+            - time [ref=e275]: 2022 — 2023
+          - list [ref=e276]:
+            - listitem [ref=e277]: Led integration and implementation of FHIR APIs ensuring seamless communication between healthcare systems
+            - listitem [ref=e279]: Collaborated with back-end teams to design and develop scalable APIs, coordinating successful large-scale deployments
+        - generic [ref=e284]:
+          - generic [ref=e285]:
+            - generic [ref=e286]:
+              - heading "UERM" [level=3] [ref=e287]
+              - paragraph [ref=e288]: Senior Programmer
+            - time [ref=e289]: 2012 — 2022
+          - list [ref=e290]:
+            - listitem [ref=e291]: Led end-to-end design and development of scalable applications, ensuring code quality through fixes and enhancements
+            - listitem [ref=e293]: Partnered closely with clients to understand requirements, translating them into technical solutions while optimizing relational databases
+  - region "Contact information" [ref=e295]:
+    - generic [ref=e297]:
+      - generic [ref=e298]:
+        - paragraph [ref=e299]: Contact
+        - heading "Let's work together" [level=2] [ref=e300]
+        - paragraph [ref=e301]: Whether you have a project in mind, want to discuss AI infrastructure, or just want to connect — reach out.
+      - generic [ref=e303]:
+        - link "jommar.ilagan@gmail.com" [ref=e304] [cursor=pointer]:
+          - /url: mailto:jommar.ilagan@gmail.com
+          - img [ref=e305]
+          - text: jommar.ilagan@gmail.com
+        - link "GitHub" [ref=e308] [cursor=pointer]:
+          - /url: https://github.com/jommar
+          - img [ref=e309]
+          - text: GitHub
+        - link "LinkedIn" [ref=e311] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/jommarilagan/
+          - img [ref=e312]
+          - text: LinkedIn
+      - link "Download CV (PDF)" [ref=e316] [cursor=pointer]:
+        - /url: /cv/jvi_cv.pdf
+        - img [ref=e317]
+        - text: Download CV (PDF)
