@@ -22,6 +22,10 @@ export default defineNuxtConfig({
       htmlAttrs: {
         class: "dark",
       },
+      link: [
+        { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+        { rel: "alternate icon", href: "/favicon.ico" },
+      ],
       title: "Jommar Ilagan · Full Stack Developer & AI Agent Infrastructure",
       titleTemplate: "%s · Jommar Ilagan",
       meta: [
