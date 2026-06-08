@@ -23,8 +23,9 @@ export default defineNuxtConfig({
         class: "dark",
       },
       link: [
-        { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-        { rel: "alternate icon", href: "/favicon.ico" },
+        { rel: "icon", type: "image/svg+xml", href: "/favicon.svg?v=1" },
+        { rel: "alternate icon", href: "/favicon.ico?v=1" },
+        { rel: "apple-touch-icon", href: "/favicon.svg?v=1" },
       ],
       title: "Jommar Ilagan · Full Stack Developer & AI Agent Infrastructure",
       titleTemplate: "%s · Jommar Ilagan",
