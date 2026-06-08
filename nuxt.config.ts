@@ -1,55 +1,100 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-import { resolve } from "node:path";
-
-const baseURL = process.env.NUXT_APP_BASE_URL || "/";
-
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   srcDir: ".",
-  modules: ["@nuxtjs/tailwindcss"],
-  css: [resolve("./assets/styles/main.css")],
+  css: ["~/assets/styles/main.css"],
+
   postcss: {
     plugins: {
-      tailwindcss: {},
-      autoprefixer: {},
+      "@tailwindcss/postcss": {},
     },
-  },
-  alias: {
-    "@": resolve("."),
-    "~": resolve("."),
   },
   nitro: {
     preset: "github-pages",
     prerender: {
       crawlLinks: true,
-      routes: ["/"],
+      routes: ["/", "/sitemap.xml", "/robots.txt", "/llms.txt"],
     },
   },
   app: {
-    baseURL,
+    baseURL: "/",
     head: {
-      title: "Jommar Ilagan · Portfolio",
+      title: "Jommar Ilagan · Full Stack Developer & AI Agent Infrastructure",
       titleTemplate: "%s · Jommar Ilagan",
       meta: [
         {
           name: "description",
           content:
-            "Portfolio site for Jommar Ilagan showcasing health-tech and developer projects that use AI as a supporting tool.",
+            "Full Stack Developer with 10+ years of expertise in full-stack applications, AI agent infrastructure, and API integrations.",
         },
-        { name: "theme-color", content: "#04050c" },
+        { name: "theme-color", content: "#030712" },
+        { name: "color-scheme", content: "dark light" },
         { property: "og:type", content: "website" },
-        { property: "og:site_name", content: "Jommar Ilagan Portfolio" },
+        { property: "og:site_name", content: "Jommar Ilagan" },
         {
           property: "og:title",
-          content: "Jommar Ilagan · Product-focused engineer",
+          content: "Jommar Ilagan · Full Stack Developer & AI Agent Infrastructure",
         },
         {
           property: "og:description",
           content:
-            "Nuxt + Tailwind portfolio featuring clinic management, developer productivity work, and projects that use AI as an amplifier.",
+            "Full Stack Developer with 10+ years of expertise in full-stack applications, AI agent infrastructure, and API integrations.",
+        },
+        { property: "og:image", content: "/og-image.png" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: "Jommar Ilagan · Full Stack Developer & AI Agent Infrastructure" },
+        {
+          name: "twitter:description",
+          content:
+            "Full Stack Developer with 10+ years of expertise in full-stack applications, AI agent infrastructure, and API integrations.",
+        },
+      ],
+      script: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            name: "Jommar Ilagan",
+            givenName: "Jommar",
+            familyName: "Ilagan",
+            jobTitle: "Full Stack Developer",
+            description:
+              "Full Stack Developer with 10+ years of expertise in full-stack applications, AI agent infrastructure, and API integrations.",
+            knowsAbout: [
+              "AI Agent Infrastructure",
+              "Agent Orchestration",
+              "Vue.js",
+              "Nuxt",
+              "Node.js",
+              "Express",
+              "Knex",
+              "MySQL",
+              "MS SQL",
+              "AWS Lambda",
+              "FHIR API",
+              "TypeScript",
+              "JavaScript",
+              "PHP",
+            ],
+            worksFor: [
+              { "@type": "Organization", name: "CoDev" },
+              { "@type": "Organization", name: "Rendition Digital Inc." },
+              { "@type": "Organization", name: "UERM" },
+            ],
+            sameAs: [
+              "https://github.com/jommar",
+              "https://www.linkedin.com/in/jommarilagan/",
+            ],
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Manila",
+              addressCountry: "PH",
+            },
+            email: "jommar.ilagan@gmail.com",
+          }),
         },
       ],
     },
   },
-});
+})

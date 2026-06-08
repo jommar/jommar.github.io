@@ -1,224 +1,144 @@
-import type { Profile } from "~/types/profile";
+import type { Profile } from "~/types/profile"
 
 export const profile: Profile = {
   name: "Jommar Ilagan",
-  title: "Senior JavaScript engineer with AI in the toolkit",
+  title: "Full Stack Developer",
+  tagline: "Full Stack Developer · AI Agent Infrastructure",
+  location: "Manila, Philippines 1016",
+  email: "jommar.ilagan@gmail.com",
+  phone: "+639228868650",
+  linkedin: "https://www.linkedin.com/in/jommarilagan/",
+  github: "https://github.com/jommar",
+  cvUrl: "/cv/jvi_cv.pdf",
+  metrics: [
+    { value: "10+", label: "Years Experience" },
+    { value: "3", label: "Companies" },
+    { value: "Full-Stack", label: "End-to-End Dev" },
+  ],
   summary:
-    "I design and ship resilient Node.js + Vue applications, using AI as a tool where it helpswithout giving up on architecture, tests, or observability.",
-  availability:
-    "Open to senior web, product engineering, and technical leadership roles.",
-  focusAreas: [
-    "JavaScript & TypeScript",
-    "Node.js services",
-    "Vue & Nuxt web apps",
-    "AI-assisted workflows",
-  ],
-  stats: [
+    "Experienced Full Stack Developer with 10+ years of expertise in leading development teams, optimizing full-stack applications, and driving successful API integrations. Currently focused on AI agent infrastructure — designing agent orchestration systems, configuring AI tooling, and bridging the gap between traditional software engineering and AI-powered development workflows.",
+
+  valueProps: [
     {
-      label: "Active repositories",
-      value: "32",
-      detail: "Hands-on ownership across web, mobile, and backend codebases.",
-    },
-    {
-      label: "Contributions (12 mo)",
-      value: "113",
-      detail: "Recent commits across various projects.",
-    },
-    {
-      label: "Years shipping products",
-      value: "12+",
-      detail: "From hospital systems to modern AI readiness pipelines.",
-    },
-    {
-      label: "Current focus",
-      value: "Preflight MCP",
-      detail:
-        "AI-first server that keeps large language models production ready.",
-    },
-  ],
-  aiWorkflow: [
-    {
-      title: "From spec to stable code",
-      summary:
-        "Turn product docs into focused prompts, then into reviewed, testable changes.",
-      points: [
-        "Draft implementation plans in natural language, then refine with AI before touching code.",
-        "Use LLMs to propose edge cases and unhappy paths I might miss.",
-        "Keep the final decisions, naming, and architecture in human hands.",
-      ],
-    },
-    {
-      title: "Safe AI-powered refactors",
-      summary:
-        "Let AI handle mechanical work while I guard invariants and behavior.",
-      points: [
-        "Use AI to suggest refactors across Vue components and Node services.",
-        "Validate changes with existing tests and add coverage where signals are weak.",
-        "Stage risky changes behind feature flags or configuration.",
-      ],
-    },
-    {
-      title: "Designing tools for agents",
-      summary:
-        "Build MCP-style tools that make it hard for agents to do the wrong thing.",
-      points: [
-        "Wrap side-effectful actions in schemas, validators, and audit logs.",
-        "Expose read-only inspection tools before write-capable ones.",
-        "Document contracts so AI clients can self-check before calling.",
-      ],
-    },
-  ],
-  stack: [
-    {
-      label: "Core stack",
-      items: ["JavaScript / TypeScript", "Node.js", "Vue 3", "Nuxt 3"],
-    },
-    {
-      label: "Backend & data",
-      items: ["REST APIs", "MySQL", "Knex", "Express", "Serverless (Lambda)"],
-    },
-    {
-      label: "Delivery",
-      items: ["GitHub Actions", "Netlify", "Vercel", "CI-first workflows"],
-    },
-  ],
-  strengths: [
-    "Untangling legacy JavaScript and progressively modernizing it.",
-    "Designing Node.js services that stay debuggable as they grow.",
-    "Introducing AI tools to teams without breaking existing workflows.",
-  ],
-  lookingFor:
-    "Senior web and product engineering work where JavaScript, Node.js, and Vue are central—and where AI tooling is treated as an amplifier, not a replacement.",
-  experiences: [
-    {
-      period: "2025–Present",
-      role: "Creator (Side Project)",
-      org: "Preflight MCP Server",
-      impact:
-        "Built as a self-initiated side project to keep pace with rapidly evolving AI agent ecosystems. Focused on experimenting with MCP patterns, schema contracts, and safety-first tool boundaries that let AI agents inspect context before taking real actions.",
-      tags: ["Node.js", "MCP", "AI Safety", "AI Tooling"],
-    },
-    {
-      period: "2023–Present",
-      role: "Senior / Lead Full-Stack Developer",
-      org: "CoDev",
-      impact:
-        "Leading backend-centric development for large-scale transportation and routing systems, driving performance improvements, approval workflows, audit logging, and database optimizations while guiding team standards and architecture decisions.",
-      tags: ["Node.js", "Vue", "Knex", "MySQL", "System Design"],
-    },
-    {
-      period: "2022–2023",
-      role: "Senior Full-Stack Developer",
-      org: "Rendition Digital (Wellola)",
-      impact:
-        "Developed clinician-facing applications using serverless Node.js and Nuxt, integrating FHIR APIs to enable secure healthcare data exchange and support real-world clinical workflows.",
-      tags: ["Node.js", "Nuxt", "FHIR", "Healthcare", "AWS Lambda"],
-    },
-    {
-      period: "2012–2022",
-      role: "Full-Stack Developer",
-      org: "UERM (University & Hospital)",
-      impact:
-        "Delivered and maintained core internal systems including EHR, HR, laboratory, and academic platforms, modernizing hospital and university operations used daily by staff and clinicians.",
-      tags: ["PHP", "Node.js", "Vue", "Healthcare Systems"],
-    },
-  ],
-  projects: [
-    {
-      name: "Preflight MCP",
+      title: "10+ Years Full-Stack",
       description:
-        "Modular MCP server that keeps AI experiences safe via shared services, validators, and predictable envelopes.",
-      tech: ["Node.js", "MCP", "Zod"],
-      repo: "https://github.com/jommar/preflight-mcp",
-      url: "",
-      highlights: [
-        "Unified controller + service pattern for both MCP tools and HTTP routes.",
-        "Zod-backed schemas that prevent unvetted payloads from reaching adapters.",
-        "Operational checklist so AI clients can self-inspect before invoking critical actions.",
-      ],
-      status: "in-progress",
+        "End-to-end application development across Vue, Nuxt, Node.js, and relational databases. Proven track record of leading teams and delivering production-grade software.",
+      icon: "Code2",
     },
     {
-      name: "Quiz Maker",
+      title: "AI Agent Architecture",
       description:
-        "Nuxt/Vue workspace for crafting quizzes with real-time previews, import/export, and tailored UI elements.",
-      tech: ["Nuxt 3", "Vue", "TypeScript"],
-      repo: "https://github.com/jommar/quiz-maker-vue",
-      url: "https://86th-quiz-maker-v2.netlify.app/",
-      highlights: [
-        "Composable question editor with keyboard-only workflow.",
-        "Server endpoints that merge imported quizzes safely.",
-        "Toast-driven feedback loop for graders and authors.",
-      ],
-      status: "shipped",
+        "Designed commercial-grade AI agent orchestration systems using orchestrator/subagent/delegation patterns. Deep knowledge of LangChain, CrewAI, AutoGen, and OpenAI Agents SDK.",
+      icon: "Cpu",
     },
     {
-      name: "Clinic Management System",
+      title: "AI Tooling Mastery",
       description:
-        "Legacy web app orchestrating patient intake, queueing, and physician scheduling for a neighborhood clinic.",
-      tech: ["Web", "Operations", "Analytics"],
-      repo: "https://github.com/jommar/clinic-management",
-      url: "",
-      highlights: [
-        "Centralized charting and inventory metrics so staff can move in sync.",
-        "Printable billing artifacts that shorten patient checkout time.",
-        "Role-aware access controls to keep sensitive data segmented.",
-      ],
-      status: "shipped",
+        "Expert in configuring opencode, Claude Code, and MCP servers. Built custom subagents, skills, guardrails, and ported agent ecosystems across toolchains.",
+      icon: "Bot",
     },
+  ],
+
+  capabilities: [
     {
-      name: "Email API",
+      title: "AI Agent Orchestration",
       description:
-        "Express-based service that standardizes admission and triage notifications for university hospitals.",
-      tech: ["Node.js", "Express", "Nodemailer"],
-      repo: "https://github.com/jommar/uerm-email-api--node",
-      url: "",
+        "Designed delegation-first agent harnesses with orchestrator/subagent patterns, stateful graph execution, memory systems, and human-in-the-loop approval flows.",
+      icon: "Network",
+    },
+    {
+      title: "AI Research & Analysis",
+      description:
+        "Deep-dive competitive analysis of Wayland, LangChain/LangGraph, CrewAI, AutoGen, OpenAI Agents SDK, MCP protocols, and agent runtime architectures.",
+      icon: "Search",
+    },
+    {
+      title: "Agent Configuration",
+      description:
+        "Custom opencode and Claude Code setups with multi-project subagents, skills, guardrails, and tool permissions. Ported .claude agents to .opencode ecosystem.",
+      icon: "Settings2",
+    },
+    {
+      title: "Full-Stack Development",
+      description:
+        "Vue/Nuxt frontends, Node.js/Express APIs, Knex/MySQL/MS SQL databases, AWS Lambda serverless, FHIR API integration, and legacy system modernization.",
+      icon: "LayoutDashboard",
+    },
+  ],
+
+  techStack: [
+    {
+      label: "Languages",
+      items: ["JavaScript", "TypeScript", "PHP", "SQL"],
+    },
+    {
+      label: "Frameworks",
+      items: ["Vue.js", "Nuxt", "Node.js", "Express", "Knex"],
+    },
+    {
+      label: "Tools",
+      items: ["Git", "Docker", "AWS Lambda", "Postman", "Cypress"],
+    },
+    {
+      label: "Databases",
+      items: ["MySQL", "MS SQL", "Redis", "PostgreSQL"],
+    },
+  ],
+
+  workHighlights: [
+    {
+      title: "AI Agent Harness",
+      role: "Product Designer & Architect",
+      period: "2026",
+      description:
+        "Designed a commercial AI agent orchestration platform with delegation-first architecture. Defined product vision, feature specs, technical architecture, security model, and MVP roadmap.",
+      tags: ["Agent Orchestration", "System Design", "Product Docs"],
+    },
+    {
+      title: "AI Tool Ecosystem Porting",
+      role: "AI Tooling Engineer",
+      period: "2026",
+      description:
+        "Ported Claude Code agents and skills to opencode with multi-project support. Built backend/frontend coders, code reviewers, and security audit subagents with project detection and guardrails.",
+      tags: ["Opencode", "Claude Code", "Agent Config"],
+    },
+    {
+      title: "FHIR API Integration",
+      role: "Full Stack Developer",
+      period: "2022-2023",
+      description:
+        "Led FHIR API integration at Rendition Digital, ensuring seamless healthcare data exchange between systems. Designed scalable APIs and coordinated large-scale deployments.",
+      tags: ["FHIR", "API Design", "Healthcare"],
+    },
+  ],
+
+  experience: [
+    {
+      company: "CoDev",
+      role: "Full Stack Developer",
+      period: "2023 — Present",
       highlights: [
-        "Rendered transactional templates with environment-aware branding.",
-        "Queue-aware sending so sudden spikes never block urgent updates.",
-        "Structured logging that feeds into campus dashboards.",
+        "Spearhead development and optimization of robust full-stack applications ensuring high performance and scalability",
+        "Lead cross-functional teams to deliver quality software, driving codebase refactoring for improved maintainability and performance",
       ],
-      status: "shipped",
+    },
+    {
+      company: "Rendition Digital Inc.",
+      role: "Full Stack Developer",
+      period: "2022 — 2023",
+      highlights: [
+        "Led integration and implementation of FHIR APIs ensuring seamless communication between healthcare systems",
+        "Collaborated with back-end teams to design and develop scalable APIs, coordinating successful large-scale deployments",
+      ],
+    },
+    {
+      company: "UERM",
+      role: "Senior Programmer",
+      period: "2012 — 2022",
+      highlights: [
+        "Led end-to-end design and development of scalable applications, ensuring code quality through fixes and enhancements",
+        "Partnered closely with clients to understand requirements, translating them into technical solutions while optimizing relational databases",
+      ],
     },
   ],
-  activity: [
-    "Feb 2026 · 10 commits landed on Preflight MCP to harden MCP tool registration.",
-    "Feb 2026 · 2 commits to LLM Doc, documenting envelope contracts for AI clients.",
-    "2025 · Continued feature work on Quiz Maker Vue after user import feedback.",
-    "2018–Present · Maintaining legacy clinic/education systems used by Manila partners.",
-  ],
-  contact: [
-    {
-      label: "LinkedIn",
-      href: "https://www.linkedin.com/in/jommarilagan/",
-      icon: "mdi-linkedin",
-      caption: "Message me for collaborations or a deep-dive on these builds.",
-    },
-    {
-      label: "GitHub",
-      href: "https://github.com/jommar",
-      icon: "mdi-github",
-      caption: "Follow the work, open issues, or review active RFCs.",
-    },
-    {
-      label: "View CV (PDF)",
-      href: "/cv/jvi_cv.pdf",
-      icon: "mdi-file",
-      caption: "Download the latest resume as a PDF.",
-    },
-  ],
-  socials: [
-    {
-      label: "LinkedIn",
-      href: "https://www.linkedin.com/in/jommarilagan/",
-      icon: "mdi-linkedin",
-      caption: "linkedin.com/in/jommarilagan",
-    },
-    {
-      label: "GitHub",
-      href: "https://github.com/jommar",
-      icon: "mdi-github",
-      caption: "github.com/jommar",
-    },
-  ],
-};
+}

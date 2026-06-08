@@ -1,61 +1,69 @@
 <template>
-  <section id="focus" class="py-16">
-    <div class="surface-card glow-border rounded-[32px] px-8 py-10 flex flex-col lg:flex-row gap-10">
-      <div class="flex-1 space-y-6">
-        <div class="blur-pill">
-          <span class="h-2 w-2 rounded-full bg-neon inline-block"></span>
-          {{ profile.availability }}
-        </div>
-        <div>
-          <h1 class="section-heading mb-3">{{ profile.name }}</h1>
-          <p class="text-lg leading-relaxed text-soft max-w-2xl">{{ profile.summary }}</p>
-        </div>
-        <div class="flex flex-wrap gap-3">
-          <span v-for="area in profile.focusAreas" :key="area" class="hero-chip">
-            {{ area }}
-          </span>
-        </div>
-        <div class="flex flex-wrap gap-4">
-          <a
-            :href="profile?.socials?.[0]?.href"
-            target="_blank"
-            rel="noopener"
-            class="inline-flex items-center gap-2 rounded-2xl bg-white text-midnight px-6 py-3 text-base font-semibold"
-          >
-            <span aria-hidden="true" class="inline-flex h-4 w-4 items-center justify-center">
-              <IconLinkedin class="h-4 w-4" />
-            </span>
-            <span>Connect on LinkedIn</span>
-          </a>
-          <a
-            :href="profile?.socials?.[1]?.href"
-            target="_blank"
-            rel="noopener"
-            class="inline-flex items-center gap-2 rounded-2xl border border-white/30 px-6 py-3 text-base font-semibold text-soft hover:text-white"
-          >
-            <span aria-hidden="true" class="inline-flex h-4 w-4 items-center justify-center">
-              <IconGithub class="h-4 w-4" />
-            </span>
-            <span>Explore GitHub</span>
-          </a>
-        </div>
-      </div>
-      <div class="flex-1 surface-card rounded-[28px] p-6 border border-white/10">
-        <p class="text-xs uppercase tracking-[0.3em] text-soft mb-4">Operating rhythm</p>
-        <ul class="space-y-5">
-          <li v-for="(stat, index) in profile.stats" :key="stat.label" class="pb-4 border-b border-white/10 last:border-none last:pb-0">
-            <p class="text-sm font-medium">{{ stat.label }}</p>
-            <p class="text-3xl font-semibold text-white">{{ stat.value }}</p>
-            <p class="text-xs text-soft mt-1">{{ stat.detail }}</p>
-          </li>
-        </ul>
+  <section class="relative overflow-hidden" aria-label="About me">
+    <div class="hero-bg" aria-hidden="true" />
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+      <div class="max-w-3xl">
+        <Reveal>
+          <div class="flex items-center gap-2 text-sm text-muted mb-4">
+            <MapPinned class="w-4 h-4" />
+            <span>{{ profile.location }}</span>
+          </div>
+        </Reveal>
+
+        <Reveal :delay="100">
+          <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-gray-900 leading-[1.1]">
+            {{ profile.name }}
+          </h1>
+        </Reveal>
+
+        <Reveal :delay="200">
+          <p class="text-xl sm:text-2xl text-muted mt-3 font-medium">
+            {{ profile.title }}
+          </p>
+        </Reveal>
+
+        <Reveal :delay="300">
+          <p class="text-base text-muted mt-6 max-w-2xl leading-relaxed">
+            {{ profile.summary }}
+          </p>
+        </Reveal>
+
+        <Reveal :delay="400">
+          <div class="flex flex-wrap items-center gap-3 mt-8">
+            <a href="#contact" class="inline-flex items-center gap-2 bg-brand text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-brand-dark transition-colors">
+              Get in Touch
+              <ArrowRight class="w-4 h-4" />
+            </a>
+            <a :href="profile.cvUrl" download class="inline-flex items-center gap-2 border border-gray-200 text-gray-700 px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
+              Download CV
+              <Download class="w-4 h-4" />
+            </a>
+            <a :href="profile.github" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border border-gray-200 text-gray-700 px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
+              <GithubIcon class="w-4 h-4" />
+              GitHub
+            </a>
+            <a :href="profile.linkedin" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 border border-gray-200 text-gray-700 px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors">
+              <LinkedinIcon class="w-4 h-4" />
+              LinkedIn
+            </a>
+          </div>
+        </Reveal>
+
+        <Reveal :delay="500">
+          <div class="flex flex-wrap gap-8 mt-12 pt-8 border-t border-gray-100">
+            <div v-for="m in profile.metrics" :key="m.label" class="flex flex-col">
+              <span class="text-2xl font-bold text-gray-900">{{ m.value }}</span>
+              <span class="text-xs text-muted mt-0.5">{{ m.label }}</span>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { profile } from '~/data/profile'
-import IconLinkedin from '~/components/icons/IconLinkedin.vue'
-import IconGithub from '~/components/icons/IconGithub.vue'
+import { MapPinned, ArrowRight, Download } from "@lucide/vue"
+import { profile } from "~/data/profile"
 </script>

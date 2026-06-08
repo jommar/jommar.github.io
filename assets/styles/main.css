@@ -1,109 +1,131 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap');
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@custom-variant dark (&:where(.dark, .dark *));
 
-:root {
-  --app-gradient: radial-gradient(circle at top left, rgba(82, 245, 209, 0.35), transparent 55%),
-    radial-gradient(circle at 20% 80%, rgba(124, 84, 255, 0.5), transparent 60%),
-    radial-gradient(circle at 80% 20%, rgba(251, 114, 133, 0.45), transparent 50%),
-    #010308;
-  --grid-color: rgba(255, 255, 255, 0.05);
-  --glow-color: rgba(81, 248, 213, 0.25);
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --color-brand: #2563eb;
+  --color-brand-light: #3b82f6;
+  --color-brand-dark: #1d4ed8;
+  --color-surface: #f8fafc;
+  --color-muted: #64748b;
+  --color-muted-dark: #94a3b8;
 }
 
-html,
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'IBM Plex Sans', 'Space Grotesk', 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: var(--app-gradient);
-  color: #f5f7ff;
-  min-height: 100%;
+  @apply bg-white text-gray-900 font-sans antialiased;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: linear-gradient(transparent, rgba(2, 3, 10, 0.85)),
-    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px),
-    linear-gradient(0deg, var(--grid-color) 1px, transparent 1px);
-  background-size: auto, 120px 120px, 120px 120px;
-  pointer-events: none;
-  z-index: -2;
+.dark body {
+  @apply bg-gray-950 text-gray-100;
 }
 
-body::after {
-  content: '';
-  position: fixed;
+::selection {
+  @apply bg-brand/15 text-brand-dark;
+}
+
+.dark ::selection {
+  @apply bg-brand/30 text-white;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out both;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out both;
+}
+
+.hero-bg {
+  position: absolute;
   inset: 0;
-  background: radial-gradient(circle, rgba(124, 84, 255, 0.45) 0%, transparent 60%);
-  opacity: 0.25;
-  filter: blur(120px);
   pointer-events: none;
+  overflow: hidden;
   z-index: -1;
 }
 
-main {
-  background: transparent;
-}
-
-.surface-card {
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(4, 5, 12, 0.78);
-  backdrop-filter: blur(22px);
-  box-shadow: var(--glow-color) 0 0 60px;
-}
-
-.glow-border {
-  position: relative;
-}
-
-.glow-border::after {
+.hero-bg::before {
   content: '';
   position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  background: linear-gradient(130deg, rgba(81, 248, 213, 0.8), rgba(124, 84, 255, 0.7));
-  opacity: 0.45;
-  z-index: -1;
-  filter: blur(18px);
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -20%, rgba(37, 99, 235, 0.08), transparent),
+    radial-gradient(ellipse 40% 40% at 80% 80%, rgba(37, 99, 235, 0.04), transparent);
 }
 
-.hero-chip {
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-size: 0.72rem;
-  padding: 0.35rem 0.85rem;
-  border-radius: 9999px;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
+.dark .hero-bg::before {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% -20%, rgba(37, 99, 235, 0.15), transparent),
+    radial-gradient(ellipse 40% 40% at 80% 80%, rgba(37, 99, 235, 0.08), transparent);
 }
 
-.section-heading {
-  font-family: 'Space Grotesk', 'IBM Plex Sans', sans-serif;
-  font-size: clamp(1.5rem, 2vw, 2.5rem);
-  font-weight: 600;
+.hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 70% 50% at 50% 30%, black, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 50% at 50% 30%, black, transparent 70%);
 }
 
-.section-subtitle {
-  color: rgba(255, 255, 255, 0.75);
-  max-width: 560px;
+.dark .hero-bg::after {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
 }
 
-.text-soft {
-  color: rgba(255, 255, 255, 0.7);
+.dark .bg-surface {
+  @apply bg-gray-900/50;
 }
 
-.blur-pill {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  padding: 0.5rem 1.25rem;
-  border-radius: 999px;
-  display: inline-flex;
-  gap: 0.5rem;
-  align-items: center;
+.dark .border-gray-100 {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark .border-gray-200 {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.dark .text-gray-700 {
+  @apply text-gray-300;
+}
+
+.dark .text-gray-900 {
+  @apply text-gray-100;
+}
+
+.dark .hover\:bg-gray-50:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.dark .bg-white {
+  @apply bg-gray-900;
+}
+
+.dark .hover\:shadow-sm:hover {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }

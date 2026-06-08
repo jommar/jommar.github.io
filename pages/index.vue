@@ -1,17 +1,21 @@
 <template>
-  <div class="max-w-6xl mx-auto space-y-16 px-4">
+  <div>
     <HeroSection />
-    <AiWorkflowSection />
+    <ValueProposition />
+    <Capabilities />
+    <TechStack />
+    <WorkHighlights />
     <ExperienceTimeline />
-    <ProjectsShowcase />
-    <ContactPanel />
+    <ContactSection />
   </div>
 </template>
 
 <script setup lang="ts">
 import HeroSection from '~/components/sections/HeroSection.vue'
-import AiWorkflowSection from '~/components/sections/AiWorkflowSection.vue'
+import ValueProposition from '~/components/sections/ValueProposition.vue'
+import Capabilities from '~/components/sections/Capabilities.vue'
+import TechStack from '~/components/sections/TechStack.vue'
+import WorkHighlights from '~/components/sections/WorkHighlights.vue'
 import ExperienceTimeline from '~/components/sections/ExperienceTimeline.vue'
-import ProjectsShowcase from '~/components/sections/ProjectsShowcase.vue'
-import ContactPanel from '~/components/sections/ContactPanel.vue'
+import ContactSection from '~/components/sections/ContactSection.vue'
 </script>

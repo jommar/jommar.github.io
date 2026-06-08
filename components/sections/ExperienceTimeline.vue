@@ -1,113 +1,41 @@
 <template>
-  <section id="work" class="py-16">
-    <div class="mb-8">
-      <p class="hero-chip">Impact log</p>
-      <h2 class="section-heading mt-4">Shiprooms & learning loops</h2>
-      <p class="section-subtitle mt-2">
-        Every build starts with measurable constraints. Here are the projects that shaped my toolkit the most.
-      </p>
-    </div>
-    <div class="timeline-grid">
-      <article
-        v-for="item in profile.experiences"
-        :key="item.org"
-        class="timeline-entry"
-      >
-        <div class="timeline-period">
-          <div v-for="(period, index) in item.period.split('–')" :key="index">{{ period }}</div>
+  <section id="experience" class="py-16 md:py-24 bg-surface" aria-label="Work experience">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Reveal>
+        <div class="mb-12">
+          <p class="text-sm font-medium text-brand uppercase tracking-wider">Experience</p>
+          <h2 class="text-3xl md:text-4xl font-bold tracking-tight mt-2">
+            Where I've worked
+          </h2>
         </div>
-        <SurfaceCard class="rounded-3xl p-6">
-          <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
-            <div>
-              <p class="text-lg font-semibold">{{ item.role }}</p>
-              <p class="text-sm text-soft">{{ item.org }}</p>
+      </Reveal>
+
+      <div class="space-y-0">
+        <div v-for="(exp, idx) in profile.experience" :key="exp.company" class="relative pl-8 pb-8 border-l-2 border-gray-100 last:pb-0">
+          <div class="absolute left-0 top-0 -translate-x-1/2 w-4 h-4 rounded-full bg-white border-2 border-brand" />
+          <Reveal :delay="idx * 150">
+            <div class="bg-white border border-gray-100 rounded-xl p-5">
+              <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-2">
+                <div>
+                  <h3 class="text-base font-semibold">{{ exp.company }}</h3>
+                  <p class="text-sm text-muted">{{ exp.role }}</p>
+                </div>
+                <time class="text-xs text-muted whitespace-nowrap">{{ exp.period }}</time>
+              </div>
+              <ul class="space-y-1.5 mt-3">
+                <li v-for="h in exp.highlights" :key="h" class="text-sm text-gray-700 flex items-start gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-brand/40 mt-1.5 shrink-0" />
+                  {{ h }}
+                </li>
+              </ul>
             </div>
-            <div class="flex flex-wrap gap-2">
-              <span
-                v-for="tag in item.tags"
-                :key="tag"
-                class="hero-chip text-[0.65rem]"
-              >
-                {{ tag }}
-              </span>
-            </div>
-          </div>
-          <p class="text-sm leading-relaxed text-soft">{{ item.impact }}</p>
-        </SurfaceCard>
-      </article>
+          </Reveal>
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { profile } from '~/data/profile'
-import SurfaceCard from '~/components/ui/SurfaceCard.vue'
+import { profile } from "~/data/profile"
 </script>
-
-<style scoped>
-.timeline-grid {
-  position: relative;
-  margin-left: clamp(0px, 2vw, 32px);
-  padding-left: 28px;
-}
-
-.timeline-grid::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 12px;
-  width: 2px;
-  background: linear-gradient(180deg, rgba(124, 84, 255, 0.3), rgba(36, 225, 193, 0.35));
-}
-
-.timeline-entry {
-  position: relative;
-  margin-bottom: 32px;
-  display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 24px;
-}
-
-.timeline-entry::before {
-  content: '';
-  position: absolute;
-  top: 18px;
-  left: 12px;
-  width: 12px;
-  height: 12px;
-  background: #24e1c1;
-  border-radius: 50%;
-  border: 2px solid #050812;
-  box-shadow: 0 0 18px rgba(36, 225, 193, 0.7);
-}
-
-.timeline-period {
-  text-align: right;
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.6);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  padding-right: 12px;
-}
-
-@media (max-width: 960px) {
-  .timeline-entry {
-    grid-template-columns: 1fr;
-    padding-left: 12px;
-  }
-
-  .timeline-period {
-    text-align: left;
-    padding-bottom: 4px;
-  }
-
-  .timeline-grid::before {
-    left: 2px;
-  }
-
-  .timeline-entry::before {
-    left: 2px;
-  }
-}
-</style>

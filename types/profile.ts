@@ -1,59 +1,49 @@
-export interface Stat {
-  label: string
-  value: string
-  detail: string
-}
-
-export interface ExperienceItem {
-  period: string
-  role: string
-  org: string
-  impact: string
-  tags: string[]
-}
-
-export interface Project {
-  name: string
-  description: string
-  tech: string[]
-  repo: string
-  url?: string
-  highlights: string[]
-  status: 'in-progress' | 'shipped'
-}
-
-export interface AiWorkflowItem {
+export interface Capability {
   title: string
-  summary: string
-  points: string[]
+  description: string
+  icon: string
 }
 
-export interface StackGroup {
+export interface TechCategory {
   label: string
   items: string[]
 }
 
-export interface ContactLink {
+export interface WorkHighlight {
+  title: string
+  role: string
+  period: string
+  description: string
+  tags: string[]
+}
+
+export interface Metric {
+  value: string
   label: string
-  href: string
-  icon: string
-  caption: string
+}
+
+export interface Experience {
+  company: string
+  role: string
+  period: string
+  highlights: string[]
 }
 
 export interface Profile {
   name: string
   title: string
+  tagline: string
+  location: string
+  email: string
+  phone: string
+  linkedin: string
+  github: string
+  cvUrl: string
   summary: string
-  availability: string
-  focusAreas: string[]
-  stats: Stat[]
-  experiences: ExperienceItem[]
-  projects: Project[]
-  activity: string[]
-  aiWorkflow: AiWorkflowItem[]
-  stack: StackGroup[]
-  strengths: string[]
-  lookingFor: string
-  contact: ContactLink[]
-  socials: ContactLink[]
+  metrics: Metric[]
+  valueProps: Capability[]
+  capabilities: Capability[]
+  techStack: TechCategory[]
+  workHighlights: WorkHighlight[]
+  experience: Experience[]
 }

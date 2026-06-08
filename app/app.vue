@@ -1,8 +1,7 @@
 <template>
   <div class="min-h-screen flex flex-col">
     <AppHeader />
-    <main class="flex-1 px-4 sm:px-8 lg:px-16 xl:px-24 py-8">
-      <NuxtRouteAnnouncer />
+    <main class="flex-1">
       <NuxtPage />
     </main>
     <AppFooter />

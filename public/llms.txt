@@ -1,0 +1,28 @@
+# Jommar Ilagan
+
+## Who
+Full Stack Developer with 10+ years of experience. Based in Manila, Philippines.
+
+## Focus
+- AI Agent Infrastructure (orchestration, subagent patterns, tool configuration)
+- Full-stack development (Vue/Nuxt, Node.js, Knex, MySQL/MS SQL)
+- API design and integration (FHIR, REST)
+- Agent tooling (opencode, Claude Code, MCP, skills, guardrails)
+
+## Key Skills
+- Languages: JavaScript, TypeScript, PHP, SQL
+- Frameworks: Vue.js, Nuxt, Node.js, Express, Knex
+- Tools: Git, Docker, AWS Lambda, Cypress, Postman
+- Databases: MySQL, MS SQL, Redis, PostgreSQL
+- AI: Agent orchestration, LangChain/CrewAI/AutoGen ecosystem, MCP protocols
+
+## Experience
+- CoDev — Full Stack Developer (2023–present)
+- Rendition Digital Inc. — Full Stack Developer (2022–2023)
+- UERM — Senior Programmer (2012–2022)
+
+## Contact
+- Email: jommar.ilagan@gmail.com
+- GitHub: github.com/jommar
+- LinkedIn: linkedin.com/in/jommarilagan
+- CV: jommar.github.io/cv/jvi_cv.pdf

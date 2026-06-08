@@ -1,117 +1,89 @@
 <template>
-  <header class="px-4 sm:px-8 lg:px-16 xl:px-24 pt-6">
-    <div class="surface-card rounded-3xl px-5 py-4 flex items-center gap-4 sticky top-6 z-40">
-      <a href="#focus" class="flex items-center gap-3" aria-label="Back to hero focus">
-        <div class="h-12 w-12 rounded-2xl border border-white/20 bg-white/5 flex items-center justify-center font-black tracking-[0.3em] text-sm">
-          {{ initials }}
-        </div>
-        <div>
-          <p class="font-semibold">{{ profile.name }}</p>
-          <p class="text-xs text-soft uppercase tracking-wide">{{ profile.title }}</p>
-        </div>
-      </a>
+  <header class="sticky top-0 z-50 border-b border-gray-100 bg-white/80 backdrop-blur-md" role="banner">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <a href="#" class="text-lg font-semibold tracking-tight" aria-label="Home">
+          Jommar Ilagan
+        </a>
 
-      <nav class="hidden md:flex items-center gap-3 ml-auto">
-        <a
-          v-for="item in navItems"
-          :key="item.href"
-          :href="item.href"
-          class="text-xs tracking-[0.2em] uppercase text-soft hover:text-white transition-colors"
-        >
-          {{ item.label }}
-        </a>
-      </nav>
+        <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
+          <a v-for="link in navLinks" :key="link.href" :href="link.href" class="text-sm text-muted hover:text-gray-900 transition-colors">
+            {{ link.label }}
+          </a>
+        </nav>
 
-      <div class="flex items-center gap-2 ml-auto md:ml-0">
-        <a
-          :href="profile?.socials?.[1]?.href"
-          target="_blank"
-          rel="noopener"
-          class="h-11 w-11 rounded-2xl border border-white/15 flex items-center justify-center text-soft hover:text-white"
-          aria-label="GitHub profile"
-        >
-          <span class="sr-only">GitHub</span>
-          <IconGithub class="h-5 w-5" />
-        </a>
-        <a
-          :href="profile?.socials?.[0]?.href"
-          target="_blank"
-          rel="noopener"
-          class="hidden sm:inline-flex items-center gap-2 rounded-2xl bg-white text-midnight px-5 py-2 text-sm font-semibold"
-        >
-          Connect
-        </a>
-        <button
-          class="md:hidden h-11 w-11 rounded-2xl border border-white/15 text-soft"
-          type="button"
-          :aria-expanded="isMenuOpen"
-          aria-controls="mobile-nav"
-          @click="toggleMenu"
-        >
-          <span class="sr-only">Toggle menu</span>
-          <IconMenu v-if="!isMenuOpen" class="h-5 w-5" />
-          <IconClose v-else class="h-5 w-5" />
-        </button>
+        <div class="flex items-center gap-3">
+          <button
+            type="button"
+            class="p-2 rounded-lg text-muted hover:text-gray-900 hover:bg-gray-100 transition-colors"
+            :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+            @click="toggleDark"
+          >
+            <Sun v-if="isDark" class="w-4 h-4" />
+            <Moon v-else class="w-4 h-4" />
+          </button>
+
+          <button
+            type="button"
+            class="md:hidden p-2 rounded-lg text-muted hover:text-gray-900 hover:bg-gray-100 transition-colors"
+            aria-label="Toggle navigation menu"
+            @click="mobileOpen = !mobileOpen"
+          >
+            <Menu v-if="!mobileOpen" class="w-5 h-5" />
+            <X v-else class="w-5 h-5" />
+          </button>
+        </div>
       </div>
     </div>
 
-    <div
-      id="mobile-nav"
-      v-if="isMenuOpen"
-      class="mt-3 surface-card rounded-3xl px-6 py-4 flex flex-col gap-4 md:hidden"
-    >
-      <a
-        v-for="item in navItems"
-        :key="item.href"
-        :href="item.href"
-        class="text-xs tracking-[0.2em] uppercase text-soft hover:text-white"
-        @click="closeMenu"
-      >
-        {{ item.label }}
-      </a>
-      <a
-        :href="profile?.socials?.[0]?.href"
-        target="_blank"
-        rel="noopener"
-        class="inline-flex items-center justify-center rounded-2xl bg-white text-midnight px-5 py-3 text-sm font-semibold"
-        @click="closeMenu"
-      >
-        Connect
-      </a>
+    <div v-if="mobileOpen" class="md:hidden border-t border-gray-100 bg-white">
+      <nav class="px-4 py-4 space-y-3" aria-label="Mobile navigation">
+        <a
+          v-for="link in navLinks"
+          :key="link.href"
+          :href="link.href"
+          class="block text-sm text-muted hover:text-gray-900 transition-colors"
+          @click="mobileOpen = false"
+        >
+          {{ link.label }}
+        </a>
+      </nav>
     </div>
   </header>
 </template>
 
 <script setup lang="ts">
-import { computed, ref } from 'vue'
-import { profile } from '~/data/profile'
-import IconGithub from '~/components/icons/IconGithub.vue'
-import IconMenu from '~/components/icons/IconMenu.vue'
-import IconClose from '~/components/icons/IconClose.vue'
+import { Sun, Moon, Menu, X } from "@lucide/vue"
 
-const navItems = [
-  { label: 'Focus', href: '#focus' },
-  { label: 'Work', href: '#work' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Activity', href: '#activity' },
-  { label: 'Contact', href: '#contact' }
+const navLinks = [
+  { label: "Capabilities", href: "#capabilities" },
+  { label: "Tech Stack", href: "#tech-stack" },
+  { label: "Work", href: "#work" },
+  { label: "Experience", href: "#experience" },
+  { label: "Contact", href: "#contact" },
 ]
 
-const isMenuOpen = ref(false)
+const mobileOpen = ref(false)
+const isDark = ref(true)
 
-const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value
+function toggleDark() {
+  isDark.value = !isDark.value
+  document.documentElement.classList.toggle("dark", isDark.value)
+  document.querySelector('meta[name="theme-color"]')?.setAttribute("content", isDark.value ? "#030712" : "#ffffff")
+  localStorage.setItem("theme", isDark.value ? "dark" : "light")
 }
 
-const closeMenu = () => {
-  isMenuOpen.value = false
-}
-
-const initials = computed(() =>
-  profile.name
-    .split(' ')
-    .map((part) => part[0])
-    .join('')
-    .slice(0, 2)
-)
+onMounted(() => {
+  const stored = localStorage.getItem("theme")
+  const meta = document.querySelector('meta[name="theme-color"]')
+  if (stored === "light") {
+    isDark.value = false
+    document.documentElement.classList.remove("dark")
+    meta?.setAttribute("content", "#ffffff")
+  } else {
+    isDark.value = true
+    document.documentElement.classList.add("dark")
+    meta?.setAttribute("content", "#030712")
+  }
+})
 </script>
